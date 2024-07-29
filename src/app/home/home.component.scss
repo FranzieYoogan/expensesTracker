@@ -1,0 +1,73 @@
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.containerTitle {
+
+    text-align: center;
+    margin-top: 1em;
+
+}
+
+.containerItems {
+
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.containerName {
+
+    display: flex;
+    gap: 1em;
+
+}
+
+.containerName2 {
+
+    display: flex;
+    gap: 1em;
+    margin-top: 0.5em;
+
+}
+
+input:active, input:focus  {
+
+    box-shadow: 0px 0px 4px 0px green;
+    
+
+}
+
+.containerButton {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+
+}
+
+.errorStyle {
+
+    text-align: center;
+    margin-top: 0.5em;
+    color: red;
+    font-weight: 900;
+    visibility: hidden;
+}
+
+.deleteStyle {
+
+    width: 20px;
+    position: absolute;
+    left: 80%;
+    cursor: pointer;
+}
+
+.deleteStyle:hover {
+
+    transform: rotate(15deg);
+
+}

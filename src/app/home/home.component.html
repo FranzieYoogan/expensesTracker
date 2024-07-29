@@ -1,0 +1,78 @@
+<app-header></app-header>
+
+   
+<div class="containerTitle">
+    <h1>Add an item</h1>
+</div>
+
+<section class="containerAll">
+
+
+
+    <div>
+
+   
+    <div class="containerItems">
+
+        <div class="containerName">
+
+
+        <h2>Name</h2>
+
+            <input type="text" class="inputName form-control" id="name" placeholder="where it was spent">
+        </div>
+
+        <div class="containerName2">
+
+
+            <h2>Date</h2>
+    
+                <input type="date" class="inputDate form-control" id="date" placeholder="">
+           
+                <h2>Amount</h2>
+    
+                <input type="number" class="inputAmount form-control" id="amount" placeholder="">
+            
+            </div>
+    
+
+    </div>
+
+    <div class="containerButton">
+        <button type="button" (click)="add()" class="btn btn-success">Add expense</button>
+    </div>
+
+    <h1 id="error" class="errorStyle">ERROR</h1>
+
+</div>
+
+
+
+</section>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th scope="col">Expense Name</th>
+        <th scope="col">Expense Date</th>
+        <th scope="col">Expense Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+        @for (item of data; track item.expenseName; let z = $index) {
+      <tr>
+     
+ 
+        <td>{{z + 1}}</td>
+        <td>{{item.expenseName}}</td>
+        <td>{{item.expenseDate}}</td>
+        <td>${{item.expenseAmount}} <img (click)="delete(item._id)" class="deleteStyle" src="/icons/delete.png" alt=""></td>
+           
+           
+
+      </tr>
+    }
+    </tbody>
+  </table>
+
